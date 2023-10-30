@@ -36,12 +36,8 @@ app = Flask(__name__)
 def process_query(query):
     if query == "What is your name?":
         return "15mahomes"
-    return "Unknown query"
 
 @app.route("/query", methods=["GET"])
 def query_endpoint():
     q_query = request.args.get('q')
     return process_query(q_query)
-
-if __name__ == "__main__":
-    app.run(debug = True)
