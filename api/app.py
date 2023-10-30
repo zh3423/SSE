@@ -19,6 +19,7 @@ million years ago"
 
     if name == "What is your name?":
         return "15mahomes"
+    return "empty string"
 
 
 @app.route("/submit", methods=["POST"])
