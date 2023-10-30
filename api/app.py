@@ -19,12 +19,9 @@ million years ago"
 
     if name == "What is your name?":
         return "15mahomes"
-    
 
     if name == "What is 44 plus 6?":
         return "50"
-
-
     return "empty string"
 
 
