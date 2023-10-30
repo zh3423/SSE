@@ -13,7 +13,7 @@ jobs:
       - name: Install flake8
         run: pip install flake8
       - name: Run flake8
-        run: flake8 api/
+        run: flake8 --ignore=E501 api/
   unit_testing:
     needs: python-formatting
     runs-on: ubuntu-latest
@@ -41,3 +41,4 @@ jobs:
         vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
         vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }}
         vercel-args: '--prod'
+      

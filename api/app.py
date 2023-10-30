@@ -31,13 +31,12 @@ def handle_query():
     return process_query(q_query)
 
 
-app = Flask(__name__)
-
-def process_query(query):
+def process_query_2(query):
     if query == "What is your name?":
         return "15mahomes"
+
 
 @app.route("/query", methods=["GET"])
 def query_endpoint():
     q_query = request.args.get('q')
-    return process_query(q_query)
+    return process_query_2(q_query)
