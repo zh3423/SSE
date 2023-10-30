@@ -22,7 +22,14 @@ million years ago"
 
     if name == "What is 44 plus 6?":
         return "50"
-    return "empty string"
+
+    expression = name.replace("What is", "").replace("?").replace("plus", "+")
+
+    try:
+        answer = eval(expression)
+        return str(answer)
+    except Exception as e:
+        return str(e)
 
 
 @app.route("/submit", methods=["POST"])
