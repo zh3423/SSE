@@ -44,6 +44,7 @@ def handle_query():
     q_query = request.args.get('q')
     return process_query(q_query)
 
+
 @app.route('/git')
 def indexgit():
     return render_template('github_form.html')
@@ -53,10 +54,12 @@ def indexgit():
 def submitgit():
     Username = request.form.get("Username")
     import requests
-    response = requests.get("https://api.github.com/users/{GITHUB_USERNAME}/repos")
+    response = requests.get
+    ("https://api.github.com/users/{GITHUB_USERNAME}/repos")
     if response.status_code == 200:
-        repos = response.json() # data returned is a list of ‘repository’ entities
+        repos = response.json()
+        #  data returned is a list of ‘repository’ entities
         for repo in repos:
             print(repo["full_name"])
     return Username
-    return render_template("github_form.html", name = Username)
+    return render_template("github_form.html", name=Username)
